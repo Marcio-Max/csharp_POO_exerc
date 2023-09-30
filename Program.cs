@@ -12,7 +12,22 @@ namespace EX00
         {   
             //Criando instancias da classe Conta
             Conta conta = new Conta();
-            
+            conta.AdicionarLimite(1500);
+
+            conta.Deposita(1500);
+            bool sacar = conta.Sacar(4300);
+          
+            if (sacar)
+            {
+                Console.WriteLine(" Saque com SUCESSO!");
+                Console.WriteLine(" O Saldo atual de: " + conta.ConsultaSaldoDisponivel());
+
+                //Console.WriteLine(" O Saldo e de: " + conta.Saldo);
+                //Console.WriteLine(" O Limite e de: " + conta.Limite);
+                //Console.WriteLine(sacar);
+            }
+
+
 
 
 
